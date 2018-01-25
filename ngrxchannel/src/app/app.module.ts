@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ChannelviewComponent } from './components/channelview/channelview.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChannelviewComponent
   ],
   imports: [
     BrowserModule
