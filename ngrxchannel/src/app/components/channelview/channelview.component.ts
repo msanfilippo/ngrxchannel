@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {ApplicationState} from "../../store/application-state";
+import {Store} from "@ngrx/store";
+import {MessageVM} from "../channel-messages/messageVM";
+import {Observable} from "rxjs/Observable";
+import {channelSelector} from "./channelSelector";
 
 @Component({
   selector: 'app-channelview',
@@ -7,7 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChannelviewComponent implements OnInit {
 
-  constructor() { }
+  messages$: Observable<MessageVM[]>;
+
+  constructor(private store: Store<ApplicationState>) {
+
+    this.messages$ = store.select(channelSelector);
+  }
 
   ngOnInit() {
   }
