@@ -1,27 +1,27 @@
 # Ngrxchannel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    "@angular/animations": "^5.2.1",
+    "@angular/common": "^5.2.1",
+    "@angular/compiler": "^5.2.1",
+    "@angular/core": "^5.2.1",
+    "@angular/forms": "^5.2.1",
+    "@angular/http": "^5.2.1",
+    "@angular/platform-browser": "^5.2.1",
+    "@angular/platform-browser-dynamic": "^5.2.1",
+    "@angular/router": "^5.2.1",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/effects": "^5.0.1",
+    "@ngrx/router-store": "^5.0.1",
+    "@ngrx/store": "^5.0.0",
+    "@types/express": "^4.11.0",
+    "@types/lodash": "^4.14.97",
+    "body-parser": "^1.18.2",
+    "core-js": "^2.4.1",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "reselect": "^3.0.1",
+    "rxjs": "^5.5.6",
+    "ts-helpers": "^1.1.2",
+    "uuid": "^3.2.1",
+    "zone.js": "^0.8.14"
