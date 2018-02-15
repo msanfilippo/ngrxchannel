@@ -17,9 +17,13 @@ export class ChannelListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    console.log("Canales: " + JSON.stringify(this.channels));
   }
 
   selectChannel(channelId:number) {
+
+    console.log("Selección canal: " + channelId);
     this.channelSelected.next(channelId);
   }
 

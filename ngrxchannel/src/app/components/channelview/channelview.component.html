@@ -1,9 +1,8 @@
 
 <div class="message-section">
 
-
   <app-channel-messages [messages]="messages$ | async"></app-channel-messages>
 
-  <textarea class="message-composer" name="message"></textarea>
+  <textarea class="message-composer" name="message" (keyup.enter)="onNewMessage(input)" #input></textarea>
 
 </div>

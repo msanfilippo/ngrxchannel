@@ -6,7 +6,7 @@ import {ChannelVM} from "./channelVM";
 export function stateToChannelVMSelector(state: ApplicationState):ChannelVM[] {
 
   const channels = _.values<Channel>(state.storeData.channels);
-  return channels.map(_.partial(mapThreadToThreadSummary, state));
+  return channels.map(mapThreadToThreadSummary, state);
 
 }
 

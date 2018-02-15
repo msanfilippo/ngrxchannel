@@ -1,5 +1,9 @@
 <div class="thread-section">
 
+  <div class="thread-count">
+    <span><h3>Channel: {{selectedChannel | async }}</h3></span>
+  </div>
+
   <app-channel-list [channels]="channelList$ | async" (channelSelected)="onChannelSelected($event)" ></app-channel-list>
 
 </div>

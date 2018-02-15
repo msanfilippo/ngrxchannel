@@ -5,6 +5,7 @@ import {AllUserData} from "../../../shared/to/all-user-data";
 export const CHANNELS_LOADED_ACTION = 'CHANNELS_LOADED_ACTION';
 export const LOAD_CHANNELS_ACTION = 'LOAD_CHANNELS_ACTION';
 export const CHANNEL_SELECTED_ACTION = 'CHANNEL_SELECTED_ACTION';
+export const SEND_NEW_MESSAGE_ACTION = 'SEND_NEW_MESSAGE_ACTION';
 
 
 export class LoadChannelsAction implements  Action {
@@ -37,4 +38,17 @@ export class  ChannelSelectedAction implements Action {
 
 }
 
+export interface SendNewMessageActionPayload {
+  body:string;
+  channelId: number;
+  userId: number;
+}
+
+
+export class SendNewMessageAction implements Action {
+  readonly type = SEND_NEW_MESSAGE_ACTION;
+  constructor(public payload?: SendNewMessageActionPayload) {
+
+  }
+}
 

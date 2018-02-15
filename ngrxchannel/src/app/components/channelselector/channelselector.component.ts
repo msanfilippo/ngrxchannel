@@ -5,6 +5,7 @@ import {Store} from "@ngrx/store";
 import {ChannelSelectedAction, LoadChannelsAction} from "../../store/actions";
 import {ChannelVM} from "./channelVM";
 import {stateToChannelVMSelector} from "./stateToChannelVMSelector";
+import {selectedChannelSelector} from "./selectedChannelSelector";
 
 @Component({
   selector: 'app-channelselector',
@@ -13,9 +14,11 @@ import {stateToChannelVMSelector} from "./stateToChannelVMSelector";
 })
 export class ChannelselectorComponent implements OnInit {
 
-  channelList$: Observable<ChannelVM[]>;
+  channelList$:Observable<ChannelVM[]>;
+  selectedChannel: Observable<string>;
 
   constructor(private store: Store<ApplicationState>) {
+    this.selectedChannel = store.select(selectedChannelSelector);
     this.channelList$ = store.select(stateToChannelVMSelector);
   }
 

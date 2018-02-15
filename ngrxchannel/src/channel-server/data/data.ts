@@ -14,7 +14,7 @@ export const users: {[key: number]: User} = {
     }
 };
 
-export const bChannels: {[key: number]: Channel} = {
+export const channels: {[key: number]: Channel} = {
   1: {
     id: 1,
     name: '#dev',
@@ -26,7 +26,57 @@ export const bChannels: {[key: number]: Channel} = {
   },
   2: {
     id: 2,
-    name : 'deployment',
+    name : '#java',
+    messageIds: [3,4],
+    users: {
+      1: 0,
+      2: 0
+    }
+
+  },
+  3: {
+    id: 3,
+    name : '#python',
+    messageIds: [3,4],
+    users: {
+      1: 0,
+      2: 0
+    }
+
+  },
+  4: {
+    id: 4,
+    name : '#linux',
+    messageIds: [3,4],
+    users: {
+      1: 0,
+      2: 0
+    }
+
+  },
+  5: {
+    id: 5,
+    name : '#javascript',
+    messageIds: [3,4],
+    users: {
+      1: 0,
+      2: 0
+    }
+
+  },
+  6: {
+    id: 6,
+    name : '#go',
+    messageIds: [3,4],
+    users: {
+      1: 0,
+      2: 0
+    }
+
+  },
+  7: {
+    id: 7,
+    name : '#chess',
     messageIds: [3,4],
     users: {
       1: 0,
@@ -43,7 +93,7 @@ export const bMessages: {[key: number]: Message} = {
     id: 1,
     channelId: 1,
     userId: 1,
-    body: 'Hola??',
+    body: 'Hola1??',
     timestamp: new Date().getTime()
 
   },
@@ -51,21 +101,21 @@ export const bMessages: {[key: number]: Message} = {
     id: 2,
     channelId: 1,
     userId: 2,
-    body: 'Hola??',
+    body: 'Hola2??',
     timestamp: new Date().getTime()
   },
   3: {
     id: 3,
     channelId: 1,
     userId: 1,
-    body: 'Hola?? ',
+    body: 'Hola3?? ',
     timestamp: new Date().getTime()
   },
   4: {
     id: 4,
     channelId: 1,
     userId: 2,
-    body: 'Hola??',
+    body: 'Hola4??',
     timestamp: new Date().getTime()
   }
 
