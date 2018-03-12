@@ -121,10 +121,12 @@ export const bMessages: {[key: number]: Message} = {
 
 };
 
-export const channelqueue: {[key: number]: {[key: number]: number[]}} = {
+export const channelqueue: {[key: number]: string[]} = {
   1: [],
   2: [],
   3: [],
   4: [],
-  5: []
+  5: [],
+  6: [],
+  7: []
 };

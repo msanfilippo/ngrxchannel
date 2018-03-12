@@ -20,6 +20,7 @@ export class ChannelselectorComponent implements OnInit {
   constructor(private store: Store<ApplicationState>) {
     this.selectedChannel = store.select(selectedChannelSelector);
     this.channelList$ = store.select(stateToChannelVMSelector);
+    this.sessionManage();
   }
 
   ngOnInit() {
@@ -28,6 +29,11 @@ export class ChannelselectorComponent implements OnInit {
 
   onChannelSelected(selectedChannelId:number) {
     this.store.dispatch(new ChannelSelectedAction(selectedChannelId));
+  }
+
+  sessionManage(){
+    sessionStorage.clear();
+    sessionStorage.setItem("tabID",Math.random().toString());
   }
 
 }

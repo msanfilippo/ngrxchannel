@@ -1,6 +1,6 @@
 export interface MessageVM {
   id:number;
   body:string;
-  user:string;
+  user:number;
   timestamp: number;
 }

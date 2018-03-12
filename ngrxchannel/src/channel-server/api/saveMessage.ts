@@ -1,5 +1,6 @@
 import {Application} from 'express';
 import {bMessages} from "../data/data";
+import {channelqueue} from "../data/data";
 import {Message} from "../../../shared/model/message";
 import {findChannelById} from "../crud/findChannelById";
 
@@ -12,10 +13,10 @@ export function saveNewMessage(app: Application) {
     const payload = req.body;
 
     const channelId = parseInt(req.params.id),
-      userId = null;
+      userId = Number(req.headers['userid']);
 
     const message: Message = {
-      id: messageIdCounter++,
+      id: Math.random(),
       channelId,
       userId,
       body: payload.body,
@@ -24,15 +25,11 @@ export function saveNewMessage(app: Application) {
 
     bMessages[message.id] = message;
 
-    console.log("Mensaje + " + JSON.stringify(message));
-    console.log("")
+    channelqueue[channelId].push(userId + "#" + message.id.toString());
 
     const channel = findChannelById(channelId);
 
-    console.log("Canal encontrado : " + JSON.stringify(channel));
-
     channel.messageIds.push(message.id);
-
 
     res.status(200).send();
 

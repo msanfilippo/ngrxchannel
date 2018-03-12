@@ -11,8 +11,7 @@ export function getChannels(app:Application) {
     console.log("GET : /api/channels");
     const channels = getChannelsDB();
 
-    let messages: Message[] = [],
-      users: string[] = [];
+    let messages: Message[] = [];
 
     channels.forEach(thread => {
 

@@ -14,6 +14,7 @@ import {HttpModule} from "@angular/http";
 import { ChannelListComponent } from './components/channel-list/channel-list.component';
 import { ChannelMessagesComponent } from './components/channel-messages/channel-messages.component';
 import {NewMessageEffectService} from "./store/effects/new-message-effect";
+import {MessageNotificationEffectService} from "./store/effects/message-notification-service";
 
 
 const reducers = {
@@ -34,7 +35,7 @@ const reducers = {
     BrowserModule,
     HttpModule,
     StoreModule.forRoot(reducers, {initialState: INITIAL_APPLICATION_STATE}),
-    EffectsModule.forRoot([LoadChannelsEffectService, NewMessageEffectService])
+    EffectsModule.forRoot([LoadChannelsEffectService, NewMessageEffectService, MessageNotificationEffectService])
   ],
   providers: [ChannelService],
   bootstrap: [AppComponent]

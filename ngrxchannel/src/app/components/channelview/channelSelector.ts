@@ -24,8 +24,6 @@ export function channelSelector(state:ApplicationState): MessageVM[] {
 
 function mapMessageToMessageVM(state: ApplicationState, message:Message): MessageVM {
 
-  console.log("Mensaje: " + JSON.stringify(message));
-
   return {
     id: message.id,
     body:message.body,
